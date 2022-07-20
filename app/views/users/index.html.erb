@@ -1,0 +1,7 @@
+<h1>All</h1>
+<% @user.each do |user| %>
+    <div>
+        <h3><%= user.name %></h3>
+        <%= link_to "read", user_path(user), :class => 'btn btn-warning' %>
+    </div>
+<% end %>

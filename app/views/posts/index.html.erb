@@ -1,0 +1,8 @@
+<h1>All</h1>
+<% @post.each do |post| %>
+    <div>
+        <h3><%= post.title %></h3>
+        <p><%= post.body %></p>
+        <%= link_to "read", post_path(post), :class => 'btn btn-warning' %>
+    </div>
+<% end %>

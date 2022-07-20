@@ -1,0 +1,19 @@
+<h2>new user</h2>
+
+<%= form_for :user, url: users_path do |f| %>
+    <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |msg| %>
+            <div class="alert alert-danger"><%= msg %> </div>
+        <% end %>
+    <% end %>
+    <p>
+        UserName<br>
+        <%= f.text_field :name %>
+    </p>
+    
+
+    <p>
+        <%= f.submit %>
+    </p>
+
+<% end %>

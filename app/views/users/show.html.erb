@@ -1,0 +1,6 @@
+<h3>Название: <%= @user.name%></h3>
+
+<hr>
+
+<%= button_to "Удалить", user_path(@user), method: :delete, :class => 'btn btn-warning' %>
+<hr>
